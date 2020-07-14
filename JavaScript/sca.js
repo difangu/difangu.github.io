@@ -190,7 +190,7 @@ const render = () => {
  });    
 };
 
-d3.csv('https://raw.githubusercontent.com/difangu/difangu.github.io/master/2019.csv')
+d3.csv('https://raw.githubusercontent.com/difangu/difangu.github.io/master/Data/2019.csv')
   .then(loadedData => {
     data = loadedData;
     data.forEach(d => {
