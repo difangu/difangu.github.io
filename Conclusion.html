@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Conclusion</title>
+    <script src="https://unpkg.com/d3@5.9.2/dist/d3.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js"></script>
+    <script src="./face.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+      
+  </head>
+  <style>
+      li{
+        font-size: 1.25em;
+      }
+ 
+    .previous {
+        background-color: #404040 ;
+        color: white;
+        float: left;
+        margin-top: -50px;
+    }
+
+    .round {
+      border-radius: 50%;
+    }
+        
+    
+    h1{
+        font-family: Georgia;
+        text-align: center;
+        font-size: 2.5em;
+    }
+        
+    p{
+        font-family: Georgia;
+        font-size: 1.25em;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    body{
+        background-color: #EFECEA;
+        color: #635F5D;
+        line-height: 1.5;
+    }
+        
+    svg {
+        display: block;
+        margin-left: 200px;
+        margin: auto;
+    }
+
+
+  </style>
+  
+  <body>
+    <div id = "wholepage">
+        <h1>Conclusion</h1>
+            <ul>
+                <li>Average happiness scores of three groups have similar side-by-side difference (i.e. high vs. medium, or medium vs. low).</li>
+                <li>For most of the factors, there exists a strong linear relationship with happiness score. Generosity may be the only one that doesn't show conspicuous linear relationship.</li>
+                <li>Happiness Score vs. Factors Scatter Plot implies that high happiness group have more compact distritbution. While low happiness group have sparse distribution.</li>
+                <li>4-D Scatter Plot implies the cutoff point of correlationship between high happiness and medium happiness groups is vague, since most of purple and orange circles are mingled together.</li>
+                <li>4-D Scatter Plot implies the low happiness group rather stand alone. That may be due to the extreme low value of some factors dividing the blue circles apart from the rest of the groups.</li>
+            </ul>
+        <dvi>
+            <svg width="550" height="550"></svg>
+        </dvi>
+        <div>
+            <a href="./scatter2.html" class="previous">&laquo; Previous</a>
+        </div>
+    </div>
+  </body>
+</html>

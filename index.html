@@ -1,1 +1,258 @@
-<h1> Hello, world! </h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>World Happiness Report 2019</title>
+    <script src="https://unpkg.com/d3@5.9.2/dist/d3.min.js"></script>
+    <style>
+        
+    
+    wholepage{
+        width: 1400px; 
+        margin-left: 200px;
+        margin-right: 200px;
+
+    }
+        
+        
+    .next {
+        border: none;
+        background: #404040;
+        color: #ffffff;
+        font-weight: 100;
+        padding: 20px;
+        text-transform: uppercase;
+        border-radius: 6px;
+        display: inline-block;
+        transition: all 0.3s ease 0s;
+        float: right; 
+        font-size: 1em;
+        margin-right: 160px;
+        margin-top: -100px;
+    }
+
+    .next:hover {
+        color: #404040 ;
+        font-weight: 700;
+        letter-spacing: 3px;
+        background: none;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        transition: all 0.3s ease 0s;
+    }
+
+    .previous {
+        background-color: darkorange;
+        color: white;
+        float: left;
+    }
+
+    .round {
+      border-radius: 50%;
+    }
+        
+    .column {
+        float: left;
+        width: 50%;
+        text-align: center;
+        background-color: #EFECEA;
+        font-size: 1.1em;
+        font-family: sans-serif;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        background-color: #EFECEA;
+    }
+    
+    .factors{
+        padding: 35px 35px;
+        color: #635F5D;
+    }
+        
+    h1{
+        font-family: Georgia;
+        text-align: center;
+        font-size: 2.5em;
+    }
+        
+    p{
+        font-family: Georgia;
+        font-size: 1.25em;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    body{
+        background-color: #EFECEA;
+        color: #635F5D;
+        line-height: 1.5;
+    }
+        
+    svg {
+        display: block;
+        margin-left: 200px;
+    }
+        
+    button{
+        background-color: antiquewhite;
+        font-family: Georgia;
+        display: block;
+        text-decoration: none;
+        padding: 0; 
+        border: none; 
+        background: none;
+        font-size:1.225em;
+        text-align: center;
+        margin-left: 250px;
+        
+        /*
+        color: #404040 ;
+        font-weight: 700;
+        letter-spacing: 3px;
+        background: none;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        transition: all 0.3s ease 0s;*/
+        
+    }
+    
+    button: hover{
+        color: #404040;
+        font-weight: 700;
+        letter-spacing: 3px;
+        background: none;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+       
+    }
+   
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        margin-top: 300px;
+        background-color: #e1d3c1;
+        min-width: 950px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+        
+    .dropdown-content p {
+        color: #635F5D;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+        
+    .image {
+
+        border: none;
+        background: #ffffff;
+        color: #635F5D;
+        font-weight: 100;
+        padding: 20px;
+        text-transform: uppercase;
+        border-radius: 6px;
+        display: inline-block;
+        transition: all 0.3s ease 0s; 
+        font-size: 1em;
+        margin-left: 325px;
+        margin-top: 50px;
+    }
+
+    .image:hover {
+        color: #404040 ;
+        font-weight: 700;
+        letter-spacing: 3px;
+        background: none;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        transition: all 0.3s ease 0s;
+    }
+        
+        
+    .dropdown-content p:hover {background-color: #e1d3c1;}
+
+    .row1:hover .dropdown-content {display: block;}
+    .row2:hover .dropdown-content {display: block;}
+    .row3:hover .dropdown-content {display: block;}
+    .row4:hover .dropdown-content {display: block;}
+    .row5:hover .dropdown-content {display: block;}
+    .row6:hover .dropdown-content {display: block;}
+
+
+
+
+</style>
+    <script src="face.js" defer></script>  
+  </head>
+  <body>
+    <div id = "wholepage">
+    <div>
+        <h1>World Happiness Report 2019</h1>
+        <p>"The World Happiness Report is a landmark survey of the state of global happiness. Data is collected from people in over 150 countries. Each variable measured reveals a populated-weighted average score on a scale running from 0 to 10 that is tracked over time and compared against other countries. These variables currently include: real GDP per capita, social support, healthy life expectancy, freedom to make life choices, generosity, and perceptions of corruption." </p>
+    </div>
+      
+    <div class = "row1">
+        <div class = "column">
+             <button class = "factors">Happiness</button>
+        </div>
+        <div class="dropdown-content">      <p>The rankings of national happiness are based on a Cantril ladder survey. Nationally representative samples of respondents are asked to think of a ladder, with the best possible life for them being a 10, and the worst possible life being a 0. They are then asked to rate their own current lives on that 0 to 10 scale. The report correlates the results with various life factors.</p>
+        </div>
+    </div>
+      
+    <div class = "row2">
+
+         <div class = "column"><button class = "factors">GDP per Capita</button></div>
+            <div class="dropdown-content">  <p>GDP per capita is in terms of Purchasing Power Parity (PPP) adjusted to constant 2011 international dollars, taken from the World Development Indicators (WDI) released by the World Bank on November 14, 2018. See Statistical Appendix 1 for more details. GDP data for 2018 are not yet available, so we extend the GDP time series from 2017 to 2018 using country-specific forecasts of real GDP growth from the OECD Economic Outlook No. 104 (Edition November 2018) and the World Bank’s Global Economic Prospects (Last Updated: 06/07/2018), after adjustment for population growth. The equation uses the natural log of GDP per capita, as this form fits the data significantly better than GDP per capita.</p>
+            </div>
+    </div>
+    
+    <div class = "row3">
+         <div class = "column"><button class = "factors">Social Support</button> </div>
+            <div class="dropdown-content">
+                <p>Social support is the national average of the binary responses (either 0 or 1) to the Gallup World Poll (GWP) question “If you were in trouble, do you have relatives or friends you can count on to help you whenever you need them, or not?”
+</p>
+            </div>
+    </div>
+      
+    <div class = "row4">  
+         <div class = "column"><button class = "factors">Freedom</button></div>
+            <div class="dropdown-content">
+                <p>Freedom to make life choices is the national average of binary responses to the GWP question “Are you satisfied or dissatisfied with your freedom to choose what you do with your life?”</p>
+            </div>
+    </div>  
+      
+    <div class = "row5">    
+         <div class = "column"><button class = "factors">Generosity</button></div>
+        <div class="dropdown-content">
+            <p>Generosity is the residual of regressing the national average of GWP responses to the question “Have you donated money to a charity in the past month?” on GDP per capita.</p>
+        </div>
+    </div>
+    
+    <div class = "row6">   
+         <div class = "column"><button class = "factors">Corruption</button> </div>
+        <div class="dropdown-content">
+            <p>Perceptions of corruption are the average of binary answers to two GWP questions: “Is corruption widespread throughout the government or not?” and “Is corruption widespread within businesses or not?” Where data for government corruption are missing, the perception of business corruption is used as the overall corruption-perception measure.</p>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <a href = "https://worldhappiness.report/ed/2019/" class="image"><img src="./WHR2019.png"  width = "1000" height = "350">
+            </a>
+        </div>
+    </div>
+        
+    
+        
+    <div>
+      <a href="./average_happiness.html" class="next">Next &raquo;</a>
+    </div>
+    </div>
+  </body>
+</html>
+
+

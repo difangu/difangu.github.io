@@ -1,0 +1,106 @@
+#wholepage{
+    width: 1400px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+  margin: 0px;
+  overflow: hidden;
+  font-family: Georgia;
+  background-color: #EFECEA;
+  font-size: 1em;
+  color: #635F5D;
+  line-height: 1.5;
+}
+
+h1{
+    font-family: Georgia;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+circle {
+  opacity: 0.5;
+}
+
+text {
+  font-family: Georgia;
+}
+
+.tick text {
+  font-size: 1.25em;
+  fill: #635F5D;
+}
+
+.tick line {
+  stroke: #C0C0BB;
+  opacity: 0.45;
+}
+
+.axis-label {
+  font-size: 3em;
+  fill: #8E8883;
+}
+
+#menus select option{
+    font-size: 0.5rem;    
+}
+
+#menus select{
+    font-size: 1.5em; 
+    font-size: 1.5rem; 
+
+}
+
+#menus{
+     text-align: center;
+     margin-top: 30px;
+}
+
+svg{
+    margin-left: 100px;
+    margin-right: 200px;
+}
+
+.previous {
+
+        float: left; 
+        
+    }
+
+li{
+    font-size: 1.25em;
+}
+
+.next {
+    float: right;
+}
+
+p{
+    font-size: 1.25em;
+    line-height: 1.5;
+}
+
+ a {
+        border: none;
+        background: #404040;
+        color: #ffffff;
+        font-weight: 100;
+        padding: 20px;
+        text-transform: uppercase;
+        border-radius: 6px;
+        display: inline-block;
+        transition: all 0.3s ease 0s;
+        float: right; 
+    }
+
+a:hover {
+        color: #404040 ;
+        font-weight: 700;
+        letter-spacing: 3px;
+        background: none;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        transition: all 0.3s ease 0s;
+}
