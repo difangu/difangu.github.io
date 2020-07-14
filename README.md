@@ -1,4 +1,4 @@
-# difangu.github.io
+# World Happiness Report 2019
 CS-498-Data-Visualization
 
 In this final project, we will take the journey to look at The World Happiness Report 2019:  
