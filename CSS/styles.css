@@ -1,7 +1,7 @@
 #wholepage{
     margin-left: auto;
     margin-right: auto;
-    overflow: auto;
+    overflow: scroll;
 }
 
 body {
