@@ -62,19 +62,23 @@ svg{
     display: block;
 }
 
+
 .previous {
 
         float: left; 
+        position: relative;
         
-    }
+}
+
+.next {
+    float: right; 
+    position: relative;
+}
 
 li{
     font-size: 1.25em;
 }
 
-.next {
-    float: right;
-}
 
 p{
     font-size: 1.25em;

@@ -63,11 +63,13 @@ svg{
 .previous {
 
         float: left; 
+        position: relative;
         
-    }
+}
 
 .next {
-    float: right;
+    float: right; 
+    position: relative;
 }
 
 p{
